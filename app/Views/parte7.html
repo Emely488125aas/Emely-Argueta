@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro - Emi&Lu Boutique</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
+      <div class="text-center mb-3">
+        <span class="fw-bold fs-4">EMI &amp; LU BOUTIQUE</span>
+      </div>
+      <h4 class="mb-3 text-center">Crear tu cuenta gratis</h4>
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre(s)</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)" required>
+        </div>
+        <div class="mb-3">
+          <label for="apellidos" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" required>
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="correo" placeholder="Correo electrónico" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono de contacto (Incluir lada)</label>
+          <input type="tel" class="form-control" id="telefono" placeholder="Teléfono de contacto" required>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="terminos" required>
+          <label class="form-check-label" for="terminos">
+            Al registrar acepto los <a href="#">Términos y Condiciones</a>.
+          </label>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Crear cuenta</button>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

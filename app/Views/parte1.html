@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras - Emi&Lu Boutique</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      text-align: center;
+    }
+ 
+    /* Menú  */
+    .menu {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 26px;
+      cursor: pointer;
+    }
+ 
+    /* Logo */
+    .logo {
+      margin: 20px;
+    }
+ 
+    .logo img {
+      max-width: 220px;
+      height: auto;
+    }
+ 
+    h2 {
+      margin: 15px 0;
+      font-size: 22px;
+    }
+ 
+    /* Tabla de productos */
+    table {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+ 
+    table thead {
+      background: #ddd;
+    }
+ 
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+ 
+    table img {
+      width: 120px;
+      height: auto;
+    }
+ 
+    /* Inputs */
+    input[type="text"],
+    input[type="number"] {
+      padding: 6px;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+      background: #f5f5f5;
+    }
+ 
+    /* Botones */
+    .btn {
+      background: #2d5ca6;
+      color: white;
+      font-weight: bold;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 8px 0;
+      transition: 0.3s;
+    }
+ 
+    .btn:hover {
+      background: #1e4070;
+    }
+ 
+    /* Contenedor inferior */
+    .bottom-box {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      text-align: left;
+    }
+ 
+    .bottom-box div {
+      flex: 1 1 45%;
+    }
+ 
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+ 
+    .total {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+      border: 1px solid #2d5ca6;
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<!-- Menú hamburguesa -->
+  <div class="menu">☰</div>
+ 
+  <!-- Logo -->
+  <div class="logo">
+    <img src="./img/logo.png" alt="">
+  </div>
+ 
+  <!-- Título -->
+  <h2>Carrito de compras</h2>
+ 
+  <!-- Tabla de productos -->
+  <table>
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <img src="./img/Imagen3.jpg" alt=""><br>
+          BLAZER PIEL ANTE <br>
+          100% ZW COLLECTION <br>
+          LIMITED EDITION
+        </td>
+        <td>Q.400.00</td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>Q.400.00</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="./img/Imagen82.png" alt=""br>
+          Vestido de mujer,<br>
+          Color blanco, con detalles de flores
+        </td>
+        <td>Q.600.00</td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>Q.600.00</td>
+      </tr>
+    </tbody>
+  </table>
+ 
+  <!-- Opciones inferiores -->
+  <div class="bottom-box">
+    <div>
+      <label for="descuento">Código de descuento:</label>
+      <input type="text" id="descuento" placeholder="Ingresa código">
+      <button class="btn">Aplicar</button>
+    </div>
+ 
+    <div>
+      <label>Total:</label>
+      <div class="total">Q.1,000.00</div>
+      <button class="btn">Finalizar compra</button>
+    </div>
+  </div>
+ 
+  <div class="bottom-box">
+    <div>
+      <label for="nit">Ingresar NIT:</label>
+      <input type="text" id="nit" placeholder="Ej. 1234567">
+    </div>
+    <div>
+      <label for="direccion">Agregar dirección:</label>
+      <input type="text" id="direccion" placeholder="Ingresa tu dirección">
+    </div>
+  </div>
+ 
+  <div style="margin: 20px;">
+    <button class="btn">Haz clic para ingresar tarjeta</button>
+  </div>
+</body>
+</html>

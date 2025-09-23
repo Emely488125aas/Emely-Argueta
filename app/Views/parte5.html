@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emi&Lu Boutique</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <style>
+    body {
+      background: #fff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .main-content {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .logo-img {
+      max-width: 220px;
+      margin: 30px 0 25px 0;
+    }
+    .descripcion {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      font-size: 15px;
+      text-align: center;
+    }
+    .secciones-row {
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+    }
+    .secciones-row ul {
+      padding-left: 18px;
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+    .sucursales {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      font-size: 15px;
+      text-align: center;
+    }
+    .sucursales ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+    }
+    footer {
+      background: #f1f1f1;
+      padding: 20px 0 10px 0;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+    .menu button {
+      padding: 8px 18px;
+      border: 1px solid #000;
+      background: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 15px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .menu button.active,
+    .menu button:focus,
+    .menu button:hover {
+      background: #000;
+      color: #fff;
+    }
+    .redes {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .redes a {
+      text-decoration: none;
+      color: #000;
+      margin: 0 8px;
+    }
+    .redes a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 767px) {
+      .secciones-row {
+        flex-direction: column !important;
+        gap: 20px !important;
+      }
+      .secciones-row > div {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <div class="container">
+      <h1 class="fw-bold text-center" style="font-size: 2rem; margin-bottom: 0.5rem;">Emi&Lu Boutique</h1>
+      <h2 class="text-center" style="font-size: 1.3rem; font-weight: normal; margin-bottom: 1.5rem;">La moda que te acompaña en cada momento.</h2>
+      <div class="d-flex justify-content-center">
+        <img class="logo-img" src="./img/logo.png" alt="">
+  </div>">
+        <p>Un grupo de amigos de 17 años creó una marca de ropa urbana y juvenil para expresar su estilo y demostrar que la edad no es un límite para emprender.<br>
+        Su objetivo es inspirar a otros jóvenes a soñar y atreverse a empezar.</p>
+      </div>
+      <div class="row secciones-row d-flex justify-content-center gap-4">
+        <div class="col-md-5">
+          <h3 class="fw-bold" style="font-size: 1.1rem;">Nuestras colecciones</h3>
+          <ul>
+            <li>Casual – Looks cómodos y modernos para el día a día.</li>
+            <li>Formal – Elegancia y estilo para tus mejores momentos.</li>
+            <li>Juvenil – Tendencias frescas y llenas de energía.</li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <h3 class="fw-bold" style="font-size: 1.1rem;">Lo nuevo para ti</h3>
+          <ul>
+            <li>Nueva colección 2025</li>
+            <li>Hasta 30% de descuento en prendas seleccionadas</li>
+            <li>Looks de temporada</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sucursales">
+        <h3 class="fw-bold" style="font-size: 1.1rem;">Visítanos en Ciudad de Guatemala</h3>
+        <ul>
+          <li>Zona 10 – Oakland Mall</li>
+          <li>Zona 16 – Cayalá</li>
+          <li>Zona 11 – Miraflores</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="menu">
+      <button>Registrarse</button>
+      <button>Categorías</button>
+      <button>Página</button>
+      <button class="active">Iniciar sesión</button>
+    </div>
+    <div class="redes">
+      WhatsApp: +502 2308 0083 <br>
+      Instagram: @Emi_Lu.gt <br>
+      Facebook: @Emi_Lu.gt <br>
+      TikTok: @Emi_Lu.gt
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
