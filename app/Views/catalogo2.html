@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emi&Lu Boutique</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+    }
+
+    header img {
+      max-width: 250px;
+      height: auto;
+    }
+
+    .menu {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      cursor: pointer;
+    }
+
+    .menu div {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      text-align: center;
+    }
+
+    .item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+
+    .price {
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .item button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .item button:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <img src="./img/logo.png" alt="Logo Emi & Lu Boutique">
+    </header>
+
+    <section class="gallery">
+      <div class="item">
+        <img src="https://static.e-stradivarius.net/assets/public/9f91/b905/f5f74558872e/9edf605e9d06/06051438450-s1/06051438450-s1.jpg?ts=1750063137180&w=1024" alt="Imagen 1">
+        <div class="price">Q250</div>
+        <button><a href="agregaracarrito.html" style="color: white; text-decoration: none;">Agregar al carrito</a></button>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO0tEwnn5azVKPKqKUDHQanMpgqTcTujZe43S0WitmGeCpA0zxa6t_Ab_2ZSbwt7ZWg3I&usqp=CAU" alt="Imagen 2">
+        <div class="price">Q300</div>
+        <button><a href="agregaracarrito.html" style="color: white; text-decoration: none;">Agregar al carrito</a></button>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXuJIgvaNKnn8I3UZ3PXfXaCEkfDutKaS9ASKlKWybU85ILkvVK2aDPE2ap2LoYYoxzXE&usqp=CAU" alt="Imagen 3">
+        <div class="price">Q350</div>
+        <button><a href="agregaracarrito.html" style="color: white; text-decoration: none;">Agregar al carrito</a></button>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpnT4JlvnE6N_dS1sJxxwBiLqnUUJi_sZPmyRdNVBu1YsuDW7rOmo686T3C8dH-cHQ00o&usqp=CAU" alt="Imagen 4">
+        <div class="price">Q400</div>
+        <button><a href="agregaracarrito.html" style="color: white; text-decoration: none;">Agregar al carrito</a></button>
+      </div>
+      <div class="item">
+        <img src="https://i5.walmartimages.com/asr/85ae78a0-b928-46d2-9bab-dfca1da5a537.9e9b29a93e2b1568dcd24df5ca7ecfdb.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Imagen 5">
+        <div class="price">Q450</div>
+        <button><a href="agregaracarrito.html" style="color: white; text-decoration: none;">Agregar al carrito</a></button>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSINJx2UgPpooGS2QN0V7IGz75cu5WiQnhZnYwYL48aBDhUKZO34ZmyjmO-akPnB1S3CqY&usqp=CAU" alt="Imagen 6">
+        <div class="price">Q500</div>
+        <button><a href="agregaracarrito.html" style="color: white; text-decoration: none;">Agregar al carrito</a></button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

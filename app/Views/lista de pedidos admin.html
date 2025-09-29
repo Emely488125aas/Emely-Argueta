@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedidos - Tienda Virtual | Emi & Lu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    body { background: #f4f6f9; }
+    .sidebar {
+      background: #111;
+      color: #fff;
+      min-height: 100vh;
+      width: 220px;
+      position: fixed;
+      top: 0; left: 0;
+      padding-top: 20px;
+    }
+    .sidebar .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .sidebar .user {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .sidebar .user img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+    .sidebar .nav-link {
+      color: #fff;
+      padding: 10px 25px;
+      display: block;
+      border-radius: 4px;
+      margin-bottom: 4px;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .sidebar .nav-link.active,
+    .sidebar .nav-link:hover {
+      background: #222;
+      color: #fff;
+    }
+    .main-content {
+      margin-left: 220px;
+      padding: 30px 30px 0 30px;
+    }
+    .table-actions .btn {
+      margin-right: 4px;
+      font-size: 1rem;
+      padding: 4px 8px;
+    }
+    .table-actions .btn-info { color: #fff; }
+    .table-actions .btn-success { color: #fff; }
+    .table-actions .btn-danger { color: #fff; }
+    .topbar {
+      background: #111;
+      color: #fff;
+      padding: 12px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 220px;
+    }
+    .topbar .bi-person { font-size: 1.5rem; }
+    .breadcrumb {
+      background: none;
+      padding: 0;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">Emi & Lu</div>
+    <div class="user">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Abel">
+      <div>Abel<br><span style="font-size:0.95em;">Administrador</span></div>
+    </div>
+    <a href="#" class="nav-link"><i class="bi bi-house-door"></i> Volver</a>
+    <a href="#" class="nav-link"><i class="bi bi-people"></i> Usuarios</a>
+    <a href="#" class="nav-link active"><i class="bi bi-box-seam"></i> Pedidos</a>
+    <a href="#" class="nav-link"><i class="bi bi-person"></i> Compradores</a>
+    <a href="#" class="nav-link"><i class="bi bi-shop"></i> Tienda</a>
+    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right"></i> Salir</a>
+  </div>
+  <div class="topbar">
+    <div>
+      <i class="bi bi-list"></i>
+      <span class="ms-2 fw-bold fs-5"><i class="bi bi-box-seam"></i> Transacciones de Usuario</span>
+    </div>
+    <div>
+      <i class="bi bi-person"></i>
+    </div>
+  </div>
+  <div class="main-content">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Pedidos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Tienda Virtual</li>
+      </ol>
+    </nav>
+    <div class="card mt-3">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div>
+            <label>Mostrar
+              <select class="form-select d-inline-block w-auto mx-1" style="height:30px;">
+                <option>10</option>
+                <option>18</option>
+                <option>25</option>
+              </select>
+              registros
+            </label>
+          </div>
+         
+          <div>
+            <input type="search" class="form-control form-control-sm" placeholder="Buscar:" style="width:150px;">
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>ID</th>
+                <th>Ref/Transacción</th>
+                <th>Fecha</th>
+                <th>Monto</th>
+                <th>Tipo pago</th>
+           
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>4</td>
+                <td>SVP22171770974004</td>
+                <td>20/00/0021</td>
+                <td>Q160.00</td>
+                <td>Tarjeta</td>
+               
+                <td class="table-actions">
+                  <button class="btn btn-info btn-sm" title="Ver"><i class="bi bi-card-list"></i></button>
+                  <button class="btn btn-success btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-danger btn-sm" title="Eliminar"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>18AIA754HCTR0181V</td>
+                <td>20/00/0021</td>
+                <td>Q150.00</td>
+                <td>Tarjeta</td>
+               
+                <td class="table-actions">
+                  <button class="btn btn-info btn-sm" title="Ver"><i class="bi bi-card-list"></i></button>
+                  <button class="btn btn-success btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-danger btn-sm" title="Eliminar"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>BVP867540/1709933</td>
+                <td>20/00/0021</td>
+                <td>Q150.00</td>
+                <td>Cheque</td>
+               
+                <td class="table-actions">
+                  <button class="btn btn-info btn-sm" title="Ver"><i class="bi bi-card-list"></i></button>
+                  <button class="btn btn-success btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-danger btn-sm" title="Eliminar"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>BVP867540/1709933</td>
+                <td>20/00/0021</td>
+                <td>Q130.00</td>
+                <td>Cheque</td>
+               
+                <td class="table-actions">
+                  <button class="btn btn-info btn-sm" title="Ver"><i class="bi bi-card-list"></i></button>
+                  <button class="btn btn-success btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-danger btn-sm" title="Eliminar"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-2">
+         
+          <nav>
+            <ul class="pagination pagination-sm mb-0">
+              <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item disabled"><a class="page-link" href="#">Siguiente</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

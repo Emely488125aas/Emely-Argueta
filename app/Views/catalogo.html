@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emi&Lu Boutique</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+    }
+
+    header img {
+      max-width: 250px;
+      height: auto;
+    }
+
+    .menu {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      cursor: pointer;
+    }
+
+    .menu div {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      text-align: center;
+    }
+
+    .item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+
+    .price {
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .item button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .item button:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <img src="./img/logo.png" alt="Logo Emi & Lu Boutique">
+    </header>
+
+    <section class="gallery">
+      <div class="item">
+        <img src="https://i.pinimg.com/236x/b1/94/bd/b194bdf9be2914cdf94d7f9a3bfb5295.jpg" alt="Imagen 1">
+        <div class="price">Q250</div>
+  <button><a href="A">Agregar Carrito</a></button>
+      <div class="item">
+        <img src="https://i.pinimg.com/564x/c6/77/28/c677289da0edfafaf52f900bbe5cc5df.jpg" alt="Imagen 2">
+        <div class="price">Q300</div>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="item">
+        <img src="https://img.ltwebstatic.com/images3_pi/2024/08/02/b5/17225969128c9ba3cd56868ba1fbfa8916a8322998_thumbnail_405x552.jpg" alt="Imagen 3">
+        <div class="price">Q350</div>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/474x/83/01/68/8301688063dded702c061d068454c8d4.jpg" alt="Imagen 4">
+        <div class="price">Q400</div>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/236x/7a/e1/0d/7ae10d8b36b763cd74f7625f11cd0f5a.jpg" alt="Imagen 5">
+        <div class="price">Q450</div>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/bd/39/1c/bd391cdf587c4ec557bbc5347eac082f.jpg" alt="Imagen 6">
+        <div class="price">Q500</div>
+        <button>Agregar al carrito</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
