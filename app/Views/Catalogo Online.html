@@ -7,128 +7,152 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
-    body { background: #fafafa; }
+    body { background: #f5f5f5; font-family: Arial, sans-serif; }
+
+    /* Navbar */
     .navbar {
-      background: #fff;
-      border-bottom: 1px solid #eee;
-      font-family: Arial, sans-serif;
+      background: #111;
     }
     .navbar-brand {
       font-weight: bold;
       font-size: 2rem;
+      color: #fff !important;
       letter-spacing: 1px;
     }
-    .nav-link.active {
-      border-bottom: 2px solid #111;
-      color: #111 !important;
-      font-weight: bold;
-    }
     .nav-link {
-      color: #444 !important;
-      font-size: 1.1rem;
-      margin-right: 18px;
-      transition: color 0.2s;
+      color: #ddd !important;
+      font-size: 1.2rem;
+      margin-right: 20px;
+      transition: 0.3s;
     }
-    .nav-link:hover {
-      color: #111 !important;
+    .nav-link:hover, .nav-link.active {
+      color: #fff !important;
+      border-bottom: 2px solid #fff;
     }
+    .navbar-icons i {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-left: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .navbar-icons i:hover {
+      color: #f8c146;
+    }
+
+    /* Sidebar */
     .sidebar {
       background: #fff;
       border-right: 1px solid #eee;
-      min-width: 220px;
-      padding: 25px 18px 18px 18px;
-      font-size: 1rem;
+      min-width: 240px;
+      padding: 25px 18px;
     }
     .sidebar h6 {
       font-weight: bold;
-      margin-bottom: 10px;
-      margin-top: 18px;
-    }
-    .sidebar label, .sidebar input[type="radio"], .sidebar input[type="checkbox"] {
-      cursor: pointer;
+      margin: 20px 0 10px;
     }
     .color-dot {
       display: inline-block;
-      width: 22px;
-      height: 22px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
-      margin-right: 7px;
+      margin-right: 8px;
       border: 1px solid #ccc;
-      vertical-align: middle;
       cursor: pointer;
     }
+
+    /* Catálogo */
     .catalogo-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 32px 18px;
-      padding: 30px 18px 18px 18px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 28px;
+      padding: 30px;
     }
     .producto-card {
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: center;
-      padding: 12px 8px 18px 8px;
-      position: relative;
-      transition: box-shadow 0.2s;
+      padding: 16px 10px 20px;
+      transition: transform 0.2s, box-shadow 0.3s;
     }
     .producto-card:hover {
-      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
     .producto-card img {
       width: 100%;
-      max-width: 160px;
+      max-width: 180px;
       border-radius: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .producto-card .nombre {
-      font-size: 1rem;
-      font-weight: 500;
-      margin-bottom: 4px;
-      min-height: 38px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      min-height: 40px;
     }
     .producto-card .precio {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: bold;
+      color: #222;
+    }
+
+    /* Compra */
+    .compra-container {
+      background: #fff;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      max-width: 600px;
+    }
+    .compra-container input {
+      margin-bottom: 16px;
+    }
+    .btn-custom {
+      background: #111;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-custom:hover {
+      background: #f8c146;
       color: #111;
     }
-    @media (max-width: 900px) {
-      .catalogo-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-      .sidebar { min-width: 100px; padding: 12px 6px; font-size: 0.95rem; }
-    }
-    @media (max-width: 600px) {
-      .catalogo-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
       .sidebar { display: none; }
     }
   </style>
 </head>
 <body>
-  <!-- Barra superior -->
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Emi & Lu</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Novedades</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Colección</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
- 
+      <a class="navbar-brand" href="index.html">Emi & Lu</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Colección</a></li>
+          <li class="nav-item"><a class="nav-link" href="promociones.html">Promociones</a></li>
         </ul>
-        <div class="d-flex align-items-center">
-          <span class="me-3 text-muted" style="font-size:1rem;">#EMI&LU_STYLE
- 
-          </span>
-          <i class="bi bi-person me-3" style="font-size:1.3rem;"></i>
-          <i class="bi bi-cart me-3" style="font-size:1.3rem;"></i>
-          <i class="bi bi-heart" style="font-size:1.3rem;"></i>
+        <div class="navbar-icons d-flex align-items-center">
+          <i class="bi bi-person"></i>
+          <i class="bi bi-cart"></i>
+          <i class="bi bi-heart"></i>
         </div>
       </div>
     </div>
   </nav>
+
   <div class="d-flex">
-    <!-- Filtros laterales -->
+    <!-- Sidebar filtros -->
     <aside class="sidebar">
-      <button class="btn btn-link p-0 mb-2" style="color:#111; font-weight:bold;">Ocultar filtros</button>
       <h6>Tipología</h6>
       <div>
         <div><input type="radio" name="tipo" id="todes" checked> <label for="todes">Todo</label></div>
@@ -137,10 +161,10 @@
         <div><input type="radio" name="tipo" id="estampadas"> <label for="estampadas">Estampadas</label></div>
         <div><input type="radio" name="tipo" id="manga-corta"> <label for="manga-corta">Manga Corta</label></div>
         <div><input type="radio" name="tipo" id="manga-larga"> <label for="manga-larga">Manga Larga</label></div>
- 
         <div><input type="radio" name="tipo" id="taps"> <label for="taps">Taps</label></div>
       </div>
-      <h6 class="mt-3">Color</h6>
+
+      <h6>Color</h6>
       <div>
         <span class="color-dot" style="background:#fff;"></span>
         <span class="color-dot" style="background:#000;"></span>
@@ -151,9 +175,10 @@
         <span class="color-dot" style="background:#8b0000;"></span>
         <span class="color-dot" style="background:#008000;"></span>
       </div>
-      <h6 class="mt-3">Talla</h6>
+
+      <h6>Talla</h6>
       <div>
-        <div><input type="checkbox" id="todas-tallas" checked> <label for="todas-tallas">Todas las tallas</label></div>
+        <div><input type="checkbox" id="todas-tallas" checked> <label for="todas-tallas">Todas</label></div>
         <div><input type="checkbox" id="xs"> <label for="xs">XS</label></div>
         <div><input type="checkbox" id="s"> <label for="s">S</label></div>
         <div><input type="checkbox" id="m"> <label for="m">M</label></div>
@@ -161,73 +186,50 @@
         <div><input type="checkbox" id="xl"> <label for="xl">XL</label></div>
       </div>
     </aside>
-    <!-- Catálogo de productos -->
+
+    <!-- Catálogo -->
     <main class="flex-grow-1">
       <div class="catalogo-grid">
-        <!-- Producto 1 -->
+        <!-- Producto -->
         <div class="producto-card">
-          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/250/2/w/750/0964101250_1_1_1.jpg?ts=17138736… alt="Camiseta Tye Die de tal">
-          <div class="nombre">Camiseta Tye Die de tal</div>
+          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/250/2/w/750/0964101250_1_1_1.jpg" alt="Camiseta Tye Die de tal">
+          <div class="nombre">Camiseta Tye Die</div>
           <div class="precio">Q89.99</div>
         </div>
-        <!-- Producto 2 -->
         <div class="producto-card">
-          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/800/2/w/750/0964101800_1_1_1.jpg?ts=17138736… alt="Camiseta con manga así">
-          <div class="nombre">Camiseta con manga así ...</div>
+          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/800/2/w/750/0964101800_1_1_1.jpg" alt="Camiseta con manga">
+          <div class="nombre">Camiseta manga corta</div>
           <div class="precio">Q89.99</div>
         </div>
-        <!-- Producto 3 -->
         <div class="producto-card">
-          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/500/2/w/750/0964101500_1_1_1.jpg?ts=17138736… alt="Camiseta manga larga">
+          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/500/2/w/750/0964101500_1_1_1.jpg" alt="Camiseta manga larga">
           <div class="nombre">Camiseta manga larga</div>
           <div class="precio">Q129.50</div>
         </div>
-        <!-- Producto 4 -->
         <div class="producto-card">
-          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/300/2/w/750/0964101300_1_1_1.jpg?ts=17138736… alt="Camiseta con cuella picada">
-          <div class="nombre">Camiseta con cuella picada</div>
-          <div class="precio">Q129.50</div>
-        </div>
-        <!-- Producto 5 -->
-        <div class="producto-card">
-          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/250/2/w/750/0964101250_1_1_1.jpg?ts=17138736… alt="Camiseta Cropped de Algodón">
-          <div class="nombre">Camiseta Cropped de Algodón</div>
-          <div class="precio">Q89.50</div>
-        </div>
-        <!-- Producto 6 -->
-        <div class="producto-card">
-          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/400/2/w/750/0964101400_1_1_1.jpg?ts=17138736… alt="Camiseta Cropped de Algodón">
-          <div class="nombre">Camiseta Cropped de Algodón</div>
-          <div class="precio">Q89.50</div>
-        </div>
-        <!-- Producto 7 -->
-        <div class="producto-card">
-          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/600/2/w/750/0964101600_1_1_1.jpg?ts=17138736… alt="Camiseta cropped con frui">
-          <div class="nombre">Camiseta cropped con frui</div>
-          <div class="precio">Q125.00</div>
-        </div>
-        <!-- Producto 8 -->
-        <div class="producto-card">
-          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/700/2/w/750/0964101700_1_1_1.jpg?ts=17138736… alt="Camiseta con drrañpeo">
-          <div class="nombre">Camiseta con drrañpeo</div>
+          <img src="https://static.zara.net/photos///2024/V/0/1/p/0964/101/300/2/w/750/0964101300_1_1_1.jpg" alt="Camiseta cuello pico">
+          <div class="nombre">Camiseta cuello pico</div>
           <div class="precio">Q129.50</div>
         </div>
       </div>
     </main>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <div class="container">
-    <h2>Finalizar Compra</h2>
+
+  <!-- Finalizar compra -->
+  <div class="container compra-container">
+    <h2 class="text-center mb-4">Finalizar Compra</h2>
     <form id="compraForm" onsubmit="return irAConfirmacion(event)">
-      <label for="nit">NIT:</label>
-      <input type="text" id="nit" name="nit" required maxlength="17" placeholder="Ingrese su NIT">
+      <label for="nit" class="form-label">NIT:</label>
+      <input type="text" class="form-control" id="nit" name="nit" required maxlength="17" placeholder="Ingrese su NIT">
 
-      <label for="tarjeta">Tarjeta de Crédito:</label>
-      <input type="text" id="tarjeta" name="tarjeta" required maxlength="19" pattern="[0-9 ]{13,19}" placeholder="XXXX XXXX XXXX XXXX">
+      <label for="tarjeta" class="form-label">Tarjeta de Crédito:</label>
+      <input type="text" class="form-control" id="tarjeta" name="tarjeta" required maxlength="19" pattern="[0-9 ]{13,19}" placeholder="XXXX XXXX XXXX XXXX">
 
-      <button type="submit" class="btn">Realizar Compra</button>
+      <button type="submit" class="btn btn-custom w-100 mt-3">Realizar Compra</button>
     </form>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     function irAConfirmacion(event) {
       event.preventDefault();
@@ -237,5 +239,3 @@
   </script>
 </body>
 </html>
- 
- 
