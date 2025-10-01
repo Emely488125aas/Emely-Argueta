@@ -6,8 +6,8 @@
   <title>Landing Page - Emi&Lu Boutique</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff; /* Fondo blanco */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
       margin: 0;
       padding: 0;
       display: flex;
@@ -15,65 +15,85 @@
       align-items: center;
       min-height: 100vh;
     }
- 
+
     .container {
       background: #fff;
-      width: 350px;
-      border: 2px solid black;
-      padding: 20px;
+      width: 360px;
+      border-radius: 14px;
+      padding: 25px 20px;
       text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      animation: fadeIn 0.7s ease-in-out;
     }
- 
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .logo {
       margin-bottom: 20px;
     }
- 
+
     .logo img {
-      max-width: 200px;
+      max-width: 180px;
       height: auto;
     }
- 
+
     .menu {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 12px;
     }
- 
+
     .menu button {
       width: 100%;
-      padding: 15px;
+      padding: 14px;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
       text-align: center;
-      border: 1px solid black;
-      background: white;
+      border: none;
+      border-radius: 8px;
+      background: #212529;
+      color: #fff;
       cursor: pointer;
-      transition: background 0.2s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
- 
+
     .menu button:hover {
-      background: #f4f4f4;
+      background: #ffc107;
+      color: #212529;
+      transform: scale(1.05);
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
- 
+
   <div class="container">
-    <!-- Logo vacío -->
+    <!-- Logo -->
     <div class="logo">
-      <img src="./img/logo.png">
+      <img src="Logo con Iniciales de Nombre Sencillo Tipográfico Circular Blanco y Negro (2).png" alt="Logo Emi&Lu">
     </div>
- 
+
     <!-- Menú -->
     <div class="menu">
-     <button> <a href="catalogo.html" class="plano">Vista general</a></button>
-    <button> <a href="promociones.html" class="plano">Promociones</a></button>
-      <button> <a href="carritocompras.html" class="plano">carrito</a></button>
-      <button> <a href="seleccionarcategoria.html" class="plano">Categorial</a></button>
-       <button> <a href="informacion.html" class="plano">Información</a></button>
-       <button> <a href="productosdestacados.html" class="plano">Productos Destacados</a></button>
+      <button><a href="index.html">Inicio</a></button>
+      <button><a href="catalogo.html">Vista general</a></button>
+      <button><a href="promociones.html">Promociones</a></button>
+      <button><a href="carritocompras.html">Carrito</a></button>
+      <button><a href="informacion.html">Información</a></button>
+      <button><a href="productosdestacados.html">Productos Destacados</a></button>
     </div>
   </div>
- 
+
 </body>
 </html>
